@@ -157,8 +157,14 @@ header {
     font-family: var(--font-Agbalumo);
 }
 
-.nav-header button {
+.btn-login {
     order: 4;
+    border: none;
+    background-color: transparent;
+    color: var(--blue-active);
+    font-size: 18px;
+    text-decoration: underline;
+    margin-left: 5px;
 }
 
 .link-router {
@@ -184,11 +190,6 @@ header {
     top: 7px;
 }
 
-.group-link {
-    margin: 0 10px;
-    order: 3;
-    gap: 5px;
-}
 
 
 /* ================= MAIN ================= */
@@ -310,11 +311,6 @@ video {
     justify-content: end;
 }
 
-.feedback,
-.comment {
-    display: none;
-}
-
 .group-btn button {
     padding: 4px 10px;
     border-radius: 6px;
@@ -344,7 +340,6 @@ video {
 
 .admin-feedback {
     width: 100%;
-    display: none;
 }
 
 /* ================= FOOTER ================= */

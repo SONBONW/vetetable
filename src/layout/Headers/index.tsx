@@ -19,10 +19,7 @@ const Header = () => {
               />
               <span>AODS</span>
             </Link>
-            <div className="d-flex group-link">
-              <Link to={"/"}>Login /</Link>
-              <Link to={"/"}>Logout</Link>
-            </div>
+            <button className="btn-login">Login</button>
             <button
               className="navbar-toggler"
               type="button"
