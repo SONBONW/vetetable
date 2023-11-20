@@ -158,13 +158,13 @@ header {
 }
 
 .btn-login {
-    order: 4;
+    order: 3;
     border: none;
     background-color: transparent;
     color: var(--blue-active);
     font-size: 18px;
     text-decoration: underline;
-    margin-left: 5px;
+    margin: 0 6px;
 }
 
 .link-router {
@@ -320,9 +320,12 @@ video {
 
 /* LIST REVIEWS */
 .btn-feedback {
+    text-decoration: underline;
+}
+
+.button {
     border: none;
     background-color: transparent;
-    text-decoration: underline;
 }
 
 .btn-feedback:hover {
@@ -335,6 +338,11 @@ video {
     padding-left: 0;
     gap: 20px;
     margin-bottom: 0;
+}
+
+.comment-post {
+    display: grid;
+    gap: 8px;
 }
 
 .admin-feedback {

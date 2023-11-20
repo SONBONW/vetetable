@@ -23,7 +23,7 @@ const UserReviews = () => {
     [setDisabled]
   );
   return (
-    <div className="width-page margin-l_r space_section user-comments">
+    <div className="width-page margin-l_r space_section user-comments  border-top-section">
       <div className="row">
         <div className="col-1 avata">
           <img src={avata} alt="" />

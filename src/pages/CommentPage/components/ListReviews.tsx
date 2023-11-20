@@ -39,13 +39,20 @@ const ListReviews = () => {
           <p>Comments</p>
           <ul>
             <li className="order-0">
-              <img src={iconheart} alt="" />
+              <button className="button">
+                <img src={iconheart} alt="" />
+              </button>
             </li>
             <li className="order-1">
-              <img src={iconheartback} alt="" />
+              <button className="button">
+                <img src={iconheartback} alt="" />
+              </button>
             </li>
             <li className="order-2">
-              <button className="btn-feedback" onClick={handleBtnFeedback}>
+              <button
+                className="button btn-feedback"
+                onClick={handleBtnFeedback}
+              >
                 Phản hồi
               </button>
             </li>
@@ -55,7 +62,7 @@ const ListReviews = () => {
                   <div className="col-1 avata">
                     <img src={avata} alt="" />
                   </div>
-                  <div className="col-11">
+                  <div className="col-11 comment-post">
                     <form action="#">
                       <input
                         type="text"

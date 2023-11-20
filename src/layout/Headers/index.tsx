@@ -21,7 +21,7 @@ const Header = () => {
             </Link>
             <button className="btn-login">Login</button>
             <button
-              className="navbar-toggler"
+              className="navbar-toggler order-4"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="/navbarSupportedContent"
