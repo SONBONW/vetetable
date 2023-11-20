@@ -1,24 +1,27 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import avata from "../../../asset/images/avata.png";
 
-export const UserReviews = () => {
+const UserReviews = () => {
   const [comment, setComment] = useState(false);
-  const handleInputComment = () => {
+  const handleInputComment = useCallback(() => {
     setComment(true);
-  };
+  }, [setComment]);
 
-  const handleBtnCancelComment = () => {
+  const handleBtnCancelComment = useCallback(() => {
     setText("");
     setComment(false);
-  };
+  }, [setComment]);
   const [text, setText] = useState("");
   const [disabled, setDisabled] = useState(true);
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    let inputValue = event.target.value;
-    setText(inputValue);
-    setDisabled(inputValue === "");
-  };
+  const handleInputChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      let inputValue = event.target.value;
+      setText(inputValue);
+      setDisabled(inputValue === "");
+    },
+    [setDisabled]
+  );
   return (
     <div className="width-page margin-l_r space_section user-comments">
       <div className="row">
@@ -51,3 +54,5 @@ export const UserReviews = () => {
     </div>
   );
 };
+
+export default React.memo(UserReviews);

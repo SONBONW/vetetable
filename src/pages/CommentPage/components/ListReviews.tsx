@@ -1,26 +1,29 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import iconheart from "../../../asset/images/iconheart.svg";
 import iconheartback from "../../../asset/images/iconheartbreak.svg";
 import avata from "../../../asset/images/avata.png";
-export const ListReviews = () => {
+const ListReviews = () => {
   const [feedback, setFeedback] = useState(false);
   const handleBtnFeedback = () => {
     setFeedback(true);
   };
 
-  const handleBtnCancelFeedback = () => {
+  const handleBtnCancelFeedback = useCallback(() => {
     setText("");
     setFeedback(false);
-  };
+  }, [setFeedback]);
 
   const [text, setText] = useState("");
   const [disabled, setDisabled] = useState(true);
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    let inputValue = event.target.value;
-    setText(inputValue);
-    setDisabled(inputValue === "");
-  };
+  const handleInputChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      let inputValue = event.target.value;
+      setText(inputValue);
+      setDisabled(inputValue === "");
+    },
+    [setDisabled]
+  );
 
   return (
     <div className="width-page margin-l_r space_article">
@@ -86,3 +89,5 @@ export const ListReviews = () => {
     </div>
   );
 };
+
+export default React.memo(ListReviews);

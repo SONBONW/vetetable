@@ -1,6 +1,6 @@
 import React from "react";
-import { UserReviews } from "./components/UserReviews";
-import { ListReviews } from "./components/ListReviews";
+import UserReviews from "./components/UserReviews";
+import ListReviews from "./components/ListReviews";
 
 const CommentPage = () => {
   return (
