@@ -2,8 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SearchProduct from "./components/SearchProduct";
 import imglogo from "../../../src/asset/images/icon.png";
+// import {
+//   GoogleLogin,
+//   GoogleLogout,
+//   GoogleLoginResponse,
+//   GoogleLoginResponseOffline,
+// } from "react-google-login";
 
 const Header = () => {
+  // const responseGoogle = (
+  //   response: GoogleLoginResponse | GoogleLoginResponseOffline
+  // ) => {
+  //   console.log(response);
+  //   // Handle the response, e.g., send it to your server for authentication
+  // };
   return (
     <header>
       <div className="width-page">
@@ -20,6 +32,14 @@ const Header = () => {
               <span>AODS</span>
             </Link>
             <button className="btn-login">Login</button>
+            {/* <GoogleLogin
+              className="btn-login"
+              clientId="YOUR_GOOGLE_CLIENT_ID"
+              buttonText="Login"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              cookiePolicy={"single_host_origin"}
+            /> */}
             <button
               className="navbar-toggler order-4"
               type="button"
